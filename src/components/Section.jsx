@@ -8,20 +8,20 @@ const Section = ({ id, eyebrow, title, subtitle, children, className = '' }) => 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
           {eyebrow && (
-            <p className="text-sm uppercase tracking-[0.2em] text-slate-500 mb-3">
+            <p className="text-sm uppercase tracking-[0.2em] section-eyebrow mb-3">
               {eyebrow}
             </p>
           )}
           {title && (
             <h2
               id={`${id}-title`}
-              className="text-3xl sm:text-4xl font-semibold text-slate-900"
+              className="text-3xl sm:text-4xl font-semibold section-title"
             >
               {title}
             </h2>
           )}
           {subtitle && (
-            <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+            <p className="mt-4 text-lg section-subtitle leading-relaxed">
               {subtitle}
             </p>
           )}

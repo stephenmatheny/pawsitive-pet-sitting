@@ -10,22 +10,22 @@ const About = () => {
       subtitle={about.subtitle}
     >
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="space-y-4 text-slate-700 leading-relaxed">
+        <div className="space-y-4 text-secondary leading-relaxed">
           {about.body.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+        <div className="rounded-2xl card p-6 shadow-sm">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
             {about.card.eyebrow}
           </p>
-          <p className="mt-3 text-lg font-semibold text-slate-900">{about.card.title}</p>
-          <p className="mt-3 text-slate-600 leading-relaxed">{about.card.body}</p>
-          <div className="mt-4 grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
+          <p className="mt-3 text-lg font-semibold text-main">{about.card.title}</p>
+          <p className="mt-3 text-secondary leading-relaxed">{about.card.body}</p>
+          <div className="mt-4 grid gap-3 text-sm text-secondary sm:grid-cols-2">
             {about.card.points.map((point, index) => (
               <div
                 key={`${index}-${point}`}
-                className="rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3"
+                className="rounded-xl card-soft px-4 py-3"
               >
                 {point}
               </div>

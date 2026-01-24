@@ -17,12 +17,12 @@ const Header = () => {
   }
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/70 bg-white/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 site-header backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center px-4 py-4 sm:px-6">
         {/* Mobile menu button */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-3 py-2 text-slate-700 shadow-sm hover:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-300 md:hidden"
+          className="inline-flex items-center justify-center rounded-full border-base bg-surface px-3 py-2 text-main shadow-sm hover:border-strong focus-ring md:hidden"
           aria-expanded={open}
           aria-controls={navId}
           onClick={() => setOpen((prev) => !prev)}
@@ -30,53 +30,42 @@ const Header = () => {
           <span className="sr-only">Toggle navigation</span>
           <div className="space-y-1.5">
             <span
-              className={`block h-0.5 w-6 bg-slate-900 transition-transform ${
+              className={`block h-0.5 w-6 dot-primary transition-transform ${
                 open ? 'translate-y-1.5 rotate-45' : ''
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-slate-900 transition-opacity ${
+              className={`block h-0.5 w-6 dot-primary transition-opacity ${
                 open ? 'opacity-0' : 'opacity-100'
               }`}
             />
             <span
-              className={`block h-0.5 w-6 bg-slate-900 transition-transform ${
+              className={`block h-0.5 w-6 dot-primary transition-transform ${
                 open ? '-translate-y-1.5 -rotate-45' : ''
               }`}
             />
           </div>
         </button>
 
-        {/* Logo (left) */}
-        <div className="ml-4 flex items-center gap-2 md:ml-0">
-          <a
-            href="#top"
-            onClick={(e) => handleNavClick(e, 'top')}
-            className="inline-flex items-center"
-            aria-label="Pawsitive Pet Sitting"
-          >
-            <img
-              src={fullLogo}
-              alt="Pawsitive Pet Sitting"
-              className="h-10 w-auto"
-            />
-          </a>
+        {/* Logo (right on mobile, left on desktop) */}
+        <div className="order-2 ml-auto flex items-center gap-2 md:order-1 md:ml-4">
+          <img src={fullLogo} alt="Pawsitive Pet Sitting" className="h-10 w-auto" />
         </div>
 
-        {/* Desktop nav (right) */}
+        {/* Desktop nav */}
         <nav
           id={navId}
-          className="ml-auto hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex"
+          className="order-3 ml-6 md:ml-auto hidden items-center gap-6 text-sm font-medium text-secondary md:flex"
         >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={`#${link.href}`}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="relative pb-1 transition-colors hover:text-slate-900"
+              className="relative pb-1 nav-link transition-colors"
             >
               {link.label}
-              <span className="absolute left-0 -bottom-0.5 h-[2px] w-full origin-left scale-x-0 bg-slate-900 transition-transform hover:scale-x-100" />
+              <span className="absolute left-0 -bottom-0.5 h-[2px] w-full origin-left scale-x-0 nav-underline transition-transform hover:scale-x-100" />
             </a>
           ))}
         </nav>
@@ -84,14 +73,14 @@ const Header = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-slate-200 bg-white/95 backdrop-blur md:hidden">
-          <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-base font-medium text-slate-800 sm:px-6">
+        <div className="border-t border-base bg-surface backdrop-blur md:hidden">
+          <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-base font-medium text-main sm:px-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={`#${link.href}`}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="rounded-xl border border-transparent px-3 py-2 hover:border-slate-200"
+                className="rounded-xl border border-transparent px-3 py-2 hover:border-base"
               >
                 {link.label}
               </a>

@@ -13,15 +13,15 @@ const WhyUs = () => {
         {whyUs.map((item) => (
           <div
             key={item.title}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/70"
+            className="rounded-2xl card p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
           >
             <div className="flex items-start gap-3">
-              <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 text-white text-sm font-semibold">
+              <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full pill-primary text-sm font-semibold">
                 +
               </span>
               <div>
-                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
-                <p className="mt-2 text-slate-600 leading-relaxed">{item.detail}</p>
+                <h3 className="text-lg font-semibold text-main">{item.title}</h3>
+                <p className="mt-2 text-secondary leading-relaxed">{item.detail}</p>
               </div>
             </div>
           </div>

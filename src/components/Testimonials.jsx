@@ -13,10 +13,10 @@ const Testimonials = () => {
         {testimonials.quotes.map((quote) => (
           <div
             key={quote.name}
-            className="flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            className="flex h-full flex-col justify-between rounded-2xl card p-6 shadow-sm"
           >
-            <p className="text-lg text-slate-900 leading-relaxed">{quote.note}</p>
-            <p className="mt-4 text-sm font-semibold text-slate-600">{quote.name}</p>
+            <p className="text-lg text-main leading-relaxed">{quote.note}</p>
+            <p className="mt-4 text-sm font-semibold text-secondary">{quote.name}</p>
           </div>
         ))}
       </div>

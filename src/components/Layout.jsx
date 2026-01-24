@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
+    <div className="min-h-screen page-gradient text-main">
       <ScrollToHash />
       <Header />
       <main>{children}</main>

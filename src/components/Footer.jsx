@@ -1,24 +1,18 @@
-import { brand, navLinks } from '../data/content'
+import fullLogo from '../assets/full-logo.svg'
 
 const Footer = () => {
   return (
-    <footer className="border-t border-slate-200 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-        <div className="space-y-2">
-          <p className="text-lg font-semibold text-slate-900">{brand.name}</p>
-          <p className="text-sm text-slate-500">{brand.tagline}</p>
-        </div>
-        <div className="flex flex-wrap gap-4 text-sm text-slate-600">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={`#${link.href}`}
-              className="hover:text-slate-900 transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
+    <footer className="border-t border-base bg-surface">
+      <div className="mx-auto flex max-w-6xl flex-col items-center px-4 py-10 sm:px-6">
+        <img
+          src={fullLogo}
+          alt="Pawsitive Pet Sitting"
+          className="h-10 w-auto opacity-70 transition hover:opacity-100"
+        />
+
+        <p className="mt-3 text-xs text-muted">
+          © {new Date().getFullYear()} Pawsitive Pet Sitting
+        </p>
       </div>
     </footer>
   )
