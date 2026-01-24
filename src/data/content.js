@@ -19,7 +19,7 @@ export const hero = {
   eyebrow: 'In-home luxury care',
   title: 'Reliable, respectful pet sitting that keeps your home serene.',
   subtitle:
-    'Pawsitive Pet Sitting provides discreet drop-in visits, overnight stays, and gentle grooming for dogs, cats, horses, chickens, and every companion you love.',
+    'Pawsitive Pet Sitting provides drop-in visits, overnight stays, and gentle grooming for dogs, cats, horses, chickens, and every companion you love.',
   primaryLabel: 'Request Care',
   secondaryLabel: 'View Services',
   highlights: [

@@ -17,7 +17,7 @@ const Hero = () => {
       eyebrow={heroContent.eyebrow}
       title={heroContent.title}
       subtitle={heroContent.subtitle}
-      className="relative overflow-hidden pt-24 sm:pt-28"
+      className="relative overflow-hidden pt-6 sm:pt-6"
     >
       <div className="absolute inset-x-12 top-10 -z-10 h-72 rounded-3xl bg-gradient-to-r from-slate-100 via-white to-slate-50 blur-3xl" />
       <div className="absolute -left-10 top-14 -z-10 h-40 w-40 rounded-full bg-emerald-100/60 blur-3xl" />
