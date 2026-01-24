@@ -1,7 +1,8 @@
 import Header from './Header'
 import Footer from './Footer'
 import ScrollToHash from './ScrollToHash'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
+
 
 const Layout = ({ children }) => {
   return (
