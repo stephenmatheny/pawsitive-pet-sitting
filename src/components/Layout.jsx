@@ -1,6 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import ScrollToHash from './ScrollToHash'
+import { Analytics } from "@vercel/analytics/next"
 
 const Layout = ({ children }) => {
   return (
@@ -8,6 +9,9 @@ const Layout = ({ children }) => {
       <ScrollToHash />
       <Header />
       <main>{children}</main>
+
+      <Analytics />
+
       <Footer />
     </div>
   )
