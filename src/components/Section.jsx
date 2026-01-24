@@ -1,9 +1,34 @@
+import { useEffect, useRef } from 'react'
+
 const Section = ({ id, eyebrow, title, subtitle, children, className = '' }) => {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el || typeof IntersectionObserver === 'undefined') return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible')
+          observer.unobserve(entry.target)
+        }
+      },
+      { threshold: 0.15 },
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  const headingId = id ? `${id}-title` : undefined
+
   return (
     <section
       id={id}
-      className={`py-16 sm:py-20 scroll-mt-24 ${className}`}
-      aria-labelledby={id ? `${id}-title` : undefined}
+      ref={ref}
+      className={`reveal py-16 sm:py-20 scroll-mt-24 ${className}`}
+      aria-labelledby={headingId}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-3xl">
