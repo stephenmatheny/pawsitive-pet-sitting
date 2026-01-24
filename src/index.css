@@ -110,6 +110,10 @@ a:hover {
   }
   .btn-primary:hover {
     background: var(--primary-hover);
+    color: #f7f1ff;
+  }
+  .btn-primary:focus-visible {
+    color: #f7f1ff;
   }
   .btn-secondary {
     background: var(--surface);
