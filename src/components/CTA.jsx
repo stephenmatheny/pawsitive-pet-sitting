@@ -18,7 +18,7 @@ const CTA = () => {
           <p className="text-secondary leading-relaxed">{cta.lede}</p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="#contact"
+              href={mailtoLink}
               className="inline-flex items-center justify-center rounded-full btn-primary px-6 py-3 text-sm font-semibold focus-ring transition"
             >
               {cta.primaryLabel}

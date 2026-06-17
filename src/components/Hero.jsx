@@ -1,14 +1,6 @@
 import Section from './Section'
+import AppLink from './AppLink'
 import { brand, hero as heroContent } from '../data/content'
-
-const scrollToId = (e, id) => {
-  e.preventDefault()
-  const el = document.getElementById(id)
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    window.history.replaceState(null, '', `#${id}`)
-  }
-}
 
 const Hero = () => {
   return (
@@ -31,20 +23,18 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <a
-              href="#contact"
-              onClick={(e) => scrollToId(e, 'contact')}
+            <AppLink
+              to="/contact"
               className="inline-flex items-center justify-center rounded-full btn-primary px-6 py-3 text-sm font-semibold focus-ring transition"
             >
               {heroContent.primaryLabel}
-            </a>
-            <a
-              href="#services"
-              onClick={(e) => scrollToId(e, 'services')}
+            </AppLink>
+            <AppLink
+              to="/services"
               className="inline-flex items-center justify-center rounded-full btn-secondary px-6 py-3 text-sm font-semibold focus-ring transition"
             >
               {heroContent.secondaryLabel}
-            </a>
+            </AppLink>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
