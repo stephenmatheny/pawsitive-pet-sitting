@@ -1,19 +1,14 @@
-import Header from './Header'
+import { Analytics } from '@vercel/analytics/react'
 import Footer from './Footer'
-import ScrollToHash from './ScrollToHash'
-import { Analytics } from "@vercel/analytics/react";
+import Header from './Header'
 
-
-const Layout = ({ children }) => {
+const Layout = ({ children, currentPath }) => {
   return (
-    <div className="min-h-screen page-gradient text-main">
-      <ScrollToHash />
-      <Header />
-      <main>{children}</main>
-
-      <Analytics />
-
+    <div className="site-shell">
+      <Header currentPath={currentPath} />
+      <main className="site-main">{children}</main>
       <Footer />
+      <Analytics />
     </div>
   )
 }

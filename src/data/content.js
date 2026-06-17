@@ -1,243 +1,262 @@
 export const brand = {
   name: 'Pawsitive Pet Sitting',
-  tagline: 'Calm, meticulous in-home care for every animal.',
+  email: 'pawsitivepetsitting@example.com',
+  phoneLabel: 'Call or text details available on request',
+  footerContacts: [
+    {
+      kind: 'email',
+      label: 'Email',
+      value: 'pawsitivepetsitting@example.com',
+      href: 'mailto:pawsitivepetsitting@example.com',
+    },
+    {
+      kind: 'phone',
+      label: 'Phone',
+      value: 'Phone details by request',
+      href: '/contact',
+      internal: true,
+    },
+    {
+      kind: 'instagram',
+      label: 'Instagram',
+      value: 'Instagram coming soon',
+      href: '/contact',
+      internal: true,
+    },
+    {
+      kind: 'facebook',
+      label: 'Facebook',
+      value: 'Facebook coming soon',
+      href: '/contact',
+      internal: true,
+    },
+  ],
 }
 
 export const navLinks = [
-  { label: 'Home', href: 'hero' },
-  { label: 'Services', href: 'services' },
-  { label: 'Process', href: 'process' },
-  { label: 'Why Us', href: 'why' },
-  { label: 'About', href: 'about' },
-  { label: 'Peace of Mind', href: 'peace' },
-  { label: 'Testimonials', href: 'testimonials' },
-  { label: 'Service Area', href: 'area' },
-  { label: 'Contact', href: 'contact' },
+  { label: 'Home', path: '/' },
+  { label: 'Meet the Team', path: '/meet-the-team' },
+  { label: 'Services', path: '/services' },
+  { label: 'Booking', path: '/booking' },
+  { label: 'Gallery', path: '/gallery' },
+  { label: 'Reviews', path: '/reviews' },
+  { label: 'Contact', path: '/contact' },
 ]
 
-export const hero = {
-  eyebrow: 'In-home luxury care',
-  title: 'Reliable, respectful pet sitting that keeps your home serene.',
-  subtitle:
-    'Pawsitive Pet Sitting provides drop-in visits, overnight stays, and gentle grooming for dogs, cats, horses, chickens, and every companion you love.',
-  primaryLabel: 'Request Care',
-  secondaryLabel: 'View Services',
-  highlights: [
-    'Potty breaks, feeding, walks, and medication as needed',
-    'Overnight presence that keeps routines steady',
-    'Grooming in-home or discreet drop-off',
+export const homePage = {
+  eyebrow: 'Trusted in-home pet care',
+  title: 'Pawsitive Pet Sitting',
+  tagline: 'Loving, reliable care for your pets and home.',
+  servicesSummary:
+    'Offering drop-ins, overnight stays, in-home grooming, basic training',
+  whyChooseIntro: 'A little extra peace of mind while you’re away.',
+  whyChoose: [
+    {
+      title: 'Family-Like Care',
+      description: 'Loving care that feels personal, not rushed.',
+      icon: 'heart-home',
+    },
+    {
+      title: 'Photo & Video Updates',
+      description: 'Stay connected with consistent check-ins.',
+      icon: 'camera',
+    },
+    {
+      title: 'Reliable Visits',
+      description: 'Dependable care you can count on.',
+      icon: 'shield-check',
+    },
+    {
+      title: 'Loyalty Perks',
+      description: 'Rewards for returning families.',
+      icon: 'gift-star',
+    },
+    {
+      title: 'Referral Rewards',
+      description: 'Share Pawsitive with friends and save.',
+      icon: 'paw-share',
+    },
   ],
-  card: {
-    eyebrow: 'Trusted in-home presence',
-    title: 'Calm, attentive care that keeps routines intact.',
-    body: 'Drop-ins, overnights, and grooming delivered with the polish and respect your home deserves. Every animal, every detail handled with care.',
-    highlights: [
-      'Works with dogs, cats, horses, chickens, and exotics',
-      'Grooming available in-home or via discreet drop-off',
-    ],
-    footerLine: 'Extreme care, high standards, peaceful homes.',
-  },
-}
-
-export const trustPoints = [
-  {
-    title: 'Respect for your home',
-    detail: 'Tidy bowls, swept entryways, refreshed stalls - often better than you left them.',
-  },
-  {
-    title: 'Insured & background checked',
-    detail: 'Professional standards, keyed access protocols, and thoughtful communication.',
-  },
-  {
-    title: 'Every animal welcome',
-    detail: 'Dogs, cats, horses, chickens, exotics - confident handling with calm energy.',
-  },
-]
-
-export const trustSection = {
-  eyebrow: 'Trust & Assurance',
-  title: 'Professionalism that keeps your home serene.',
-  subtitle: 'Insured, background checked, and meticulous - with updates that let you breathe easy.',
-}
-
-export const servicesSection = {
-  eyebrow: 'Services',
-  title: 'Tailored in-home care for every animal.',
-  subtitle: 'Drop-in visits, overnights, and grooming that honor routines and respect your space.',
-}
-
-export const services = [
-  {
-    title: 'Drop-In Visits',
-    description:
-      'Perfect for potty breaks, feeding, walking, medication, and quick wellness checks that keep routines consistent.',
-    items: [
-      'Potty breaks and fresh water resets',
-      'Feeding and medications exactly as directed',
-      'Walks, turnout, or enrichment for calm energy',
-      'Tidy bowls, litter boxes, and swept stalls',
-    ],
-  },
-  {
-    title: 'Overnight Pet Sitting',
-    description:
-      'A steady, quiet presence in your home so pets sleep soundly, homes feel occupied, and details stay on track.',
-    items: [
-      'Evening and morning routines without disruption',
-      'Home-care touches: lights, mail, plants, trash bins',
-      'Detailed updates with photos for peace of mind',
-      'Respectful cleanup - leave home better than found',
-    ],
-  },
-  {
-    title: 'Grooming',
-    description:
-      'Gentle grooming in-home or via drop-off: bath, nail grinding, full brush-outs to keep coats healthy and calm.',
-    items: [
-      'Warm bath with coat conditioning',
-      'Nail grinding and paw care for comfort',
-      'Full brush-outs and de-shedding focus',
-      'In-home service or discreet drop-off available',
-    ],
-  },
-]
-
-export const processSection = {
-  eyebrow: 'How It Works',
-  title: 'Concierge-style planning for calm care.',
-  subtitle: 'Clear steps from consultation to refreshed homecoming.',
-}
-
-export const processSteps = [
-  {
-    title: 'Thoughtful consultation',
-    detail: 'We learn routines, medical needs, quirks, and household preferences so every detail is honored.',
-  },
-  {
-    title: 'Custom care plan',
-    detail: 'A documented schedule covering visits, overnights, grooming timing, and home protocols for smooth stays.',
-  },
-  {
-    title: 'Calm, consistent care',
-    detail: 'On-time visits, neat handling, clear updates, and flexible support for all species in your barn or home.',
-  },
-  {
-    title: 'Restored and refreshed',
-    detail: 'Spaces tidied, stalls mucked when appropriate, and a debrief so you return to serenity.',
-  },
-]
-
-export const whySection = {
-  eyebrow: 'Why Pawsitive',
-  title: 'Not just a sitter - a calm steward of your space.',
-  subtitle: 'High standards, respectful presence, and confidence with every species.',
-}
-
-export const whyUs = [
-  {
-    title: 'Beyond "just a sitter"',
-    detail: 'We manage the whole environment: pets, home, barn, and the calm energy your animals feel.',
-  },
-  {
-    title: 'Discreet professionalism',
-    detail: 'Insured, background checked, with polished communication and respect for privacy.',
-  },
-  {
-    title: 'All-species confidence',
-    detail: 'Dogs, cats, horses, chickens, and more - handling with safety, compassion, and expertise.',
-  },
-  {
-    title: 'Meticulous standards',
-    detail: 'We often leave barns and homes tidier than found: swept aisles, refreshed stalls, immaculate feeding areas.',
-  },
-]
-
-export const about = {
-  eyebrow: 'About',
-  title: 'A philosophy of calm, reliable stewardship.',
-  subtitle:
-    'Families choose Pawsitive Pet Sitting for the peace of mind that every creature - and every corner of home - is cared for with intention.',
-  body: [
-    'We move quietly, care deeply, and communicate clearly. From horses needing turnout to cats with medication schedules and chickens needing clean coops, we treat every animal as family and every space with respect.',
-    'Your travel time should feel restful. We make sure it does by handling details, honoring routines, and leaving your home refreshed.',
+  reviews: [
+    {
+      name: 'Client Review',
+      quote:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae lorem ac velit mollis ultrices at quis nibh.',
+    },
+    {
+      name: 'Client Review',
+      quote:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat, nibh ut blandit posuere, justo tortor facilisis nibh.',
+    },
+    {
+      name: 'Client Review',
+      quote:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue, justo vitae egestas suscipit, arcu est vehicula risus.',
+    },
   ],
-  card: {
-    eyebrow: 'Philosophy of care',
-    title: 'Calm presence, clear communication, meticulous spaces.',
-    body: 'We respect your home, your routines, and your privacy. Expect thoughtful updates, neat handling of supplies, and an easy handoff when you return.',
-    points: [
-      'Keyed access and alarm coordination',
-      'Barn, yard, and home upkeep touches included',
-      'Medication and special diet adherence',
-      'Gentle, confident handling for every species',
-    ],
-  },
+  reviewsLinkLabel: 'More Reviews',
+  serviceAreaSubtitle:
+    'Proudly serving families across East Texas and surrounding areas.',
+  serviceAreaLocations: [
+    'Lufkin, TX',
+    'Huntington, TX',
+    'Houston, TX',
+    'College Station, TX',
+    'Conroe, TX',
+    'Etoile, TX',
+    'Nacogdoches, TX',
+    'Livingston, TX',
+    'Surrounding areas',
+  ],
+  serviceAreaNote:
+    'Don’t see your city? Reach out — nearby areas may be available by request.',
+  ctaHeading: 'Ready to Book?',
+  cta:
+    "Ready to book or have questions? I'd love to help care for your pets.",
 }
 
-export const peaceOfMind = {
-  eyebrow: 'Peace of Mind',
-  title: 'Standards that feel like a concierge for your pets.',
-  subtitle: 'High-touch routines and proactive care keep animals comfortable and homes secure.',
-  highlights: [
-    'Daily updates with photos and clear notes',
-    'Secure key handling and alarm coordination',
-    'Household touches: plants, mail, bins, lights',
-    'Comfort-first handling for anxious or senior pets',
+export const teamPage = {
+  intro:
+    'Meet the people behind the care. Each visit is guided by consistency, warmth, and respectful communication.',
+  ownerCards: [
+    { name: 'Owner', role: 'Primary caregiver', badge: 'Lead' },
+    { name: 'Arlo', role: 'Zoomies instructor', badge: 'Captain' },
+    { name: 'Zena', role: 'Cozy spot inspector', badge: 'Dutchess' },
+  ],
+  members: [
+    // {
+    //   name: 'Ramona',
+    //   role: 'Lead Partner',
+    //   bio:
+    //     'Ramona helps create calm routines for busy households and brings a steady, dependable presence to overnight care and repeat visits.',
+    //   services: 'Services: overnight stays, drop-ins, routine-based care',
+    // },
+    {
+      name: 'Therese',
+      role: 'Partner',
+      bio:
+        'Therese is especially thoughtful with pets who need extra patience, gentle handling, or a little time to warm up.',
+      services: 'Services: companionship visits, shy pets, special attention care',
+    },
+    {
+      name: 'Faith',
+      role: 'Partner',
+      bio:
+        'Faith focuses on consistency, tidy care habits, and helping grooming and daily care feel low-stress from start to finish.',
+      services: 'Services: grooming support, feeding routines, daily check-ins',
+    },
+    {
+      name: 'Jessy',
+      role: 'Marketing Coordinator',
+      bio:
+        'Jessy helps manage the stories, updates, and communication touchpoints that keep clients connected while they are away.',
+      services: 'Services: client communication, updates, community outreach',
+    },
   ],
 }
 
-export const testimonials = {
-  eyebrow: 'Kind Words',
-  title: 'Trusted by discerning families.',
-  subtitle: 'Placeholders - ready for your stories of peace of mind.',
-  quotes: [
+export const servicesPage = {
+  note: 'Prices may vary by location, holidays, and care complexity.',
+  groups: [
+    {
+      title: 'Pet Sitting',
+      summary:
+        'Routine-based care designed to keep pets comfortable and homes feeling looked after while you are away.',
+      items: [
+        { title: 'Drop-In Visits', icon: 'clock' },
+        { title: 'Overnight Stays', icon: 'moon' },
+        { title: 'Feeding & Potty Breaks', icon: 'bowl' },
+        { title: 'Walks & Medication', icon: 'care-plus' },
+        { title: 'Home Care Updates', icon: 'home-note' },
+      ],
+    },
+    {
+      title: 'Grooming',
+      summary:
+        'Gentle grooming support available at my location or in-home when requested and available.',
+      items: [
+        { title: 'Drop-Off Grooming', icon: 'sparkle' },
+        { title: 'Bath & Dry', icon: 'droplet' },
+        { title: 'Full-Service Brushing', icon: 'comb' },
+        { title: 'Nail Trim & Grind', icon: 'paw' },
+        { title: 'Ear Cleaning', icon: 'ear' },
+        { title: 'Teeth Brushing', icon: 'tooth' },
+        { title: 'Pawsitive Freshen-Up', icon: 'sparkle' },
+        { title: 'Dental Treat & Bandanna', icon: 'ribbon' },
+      ],
+      footnote: 'In-home grooming is available. Prices may vary by location.',
+    },
+  ],
+}
+
+export const bookingPage = {
+  intro:
+    'Choose your dates first, then share your pet and service details so availability can be confirmed.',
+}
+
+export const galleryPage = {
+  featured: [
+    { title: 'Top Paw', subtitle: 'Happy dog walks', theme: 'plum' },
+    { title: 'Whisker Watch', subtitle: 'Cozy cat moments', theme: 'sage' },
+    { title: 'Little Wings', subtitle: 'Feathered friends', theme: 'amber' },
+    { title: 'Playtime', subtitle: 'Bright, active visits', theme: 'sky' },
+  ],
+  gallery: [
+    { title: 'Morning walk', subtitle: 'Dog care', theme: 'sky' },
+    { title: 'Window nap', subtitle: 'Cat care', theme: 'sage' },
+    { title: 'Fresh brush-out', subtitle: 'Grooming', theme: 'amber' },
+    { title: 'Barn check', subtitle: 'Horse care', theme: 'plum' },
+    { title: 'Treat break', subtitle: 'Daily visit', theme: 'rose' },
+    { title: 'Backyard zoomies', subtitle: 'Dog care', theme: 'sky' },
+    { title: 'Sunbeam stop', subtitle: 'Cat care', theme: 'sage' },
+    { title: 'Pawdicure day', subtitle: 'Grooming', theme: 'amber' },
+    { title: 'Coop visit', subtitle: 'Chicken care', theme: 'plum' },
+    { title: 'Favorite toy', subtitle: 'Play session', theme: 'rose' },
+    { title: 'Porch patrol', subtitle: 'Drop-in', theme: 'sky' },
+    { title: 'Quiet cuddle', subtitle: 'Companionship', theme: 'sage' },
+  ],
+  footer:
+    'Want your pet featured here someday? Ask about photo updates during visits and stays.',
+}
+
+export const reviewsPage = {
+  intro:
+    'Families trust Pawsitive Pet Sitting for calm communication, steady routines, and care that feels personal.',
+  reviews: [
     {
       name: 'Alexandra M.',
-      note: '"Came home to happy dogs, a swept porch, and stalls cleaner than we left them. True professionals."',
+      context: 'Multi-pet household',
+      quote:
+        'The updates were thoughtful, the care was consistent, and our pets were relaxed when we came home. That says everything.',
     },
     {
       name: 'Jordan L.',
-      note: '"Handled medications, mail, and horses without missing a beat. Felt like a concierge, not just a sitter."',
+      context: 'Weekend travel',
+      quote:
+        'Every visit happened exactly as promised. We felt informed without needing to worry, which made the whole trip easier.',
     },
     {
       name: 'Priya D.',
-      note: '"Daily updates were calm and clear - our anxious cat settled in immediately. Home was spotless."',
+      context: 'Senior pet support',
+      quote:
+        'Gentle handling, dependable routines, and real attention to detail. I would absolutely book again.',
+    },
+    {
+      name: 'Ramirez Family',
+      context: 'Home and pet care',
+      quote:
+        'It felt like our home and pets were being looked after by someone who truly cared, not someone rushing through a checklist.',
     },
   ],
 }
 
-export const serviceArea = {
-  eyebrow: 'Service Area',
-  title: 'In-home and barn visits where you are.',
-  subtitle:
-    'Based locally with flexible travel for multi-day stays. We coordinate timing to align with your pets\' routines.',
-  coverageTitle: 'Coverage',
-  coverage: [
-    'Core coverage across nearby neighborhoods and rural properties',
-    'Willing to travel for overnights and barn care with notice',
-    'Discreet pick-up/drop-off available for grooming appointments',
+export const contactPage = {
+  intro:
+    'Whether you are ready to schedule care or just want to ask a few questions, we would love to hear about your pets and what you need.',
+  details: [
+    { label: 'Email', value: 'pawsitivepetsitting@example.com', href: 'mailto:pawsitivepetsitting@example.com' },
+    { label: 'Booking', value: 'Start with your preferred dates and pet details', href: '/booking', internal: true },
+    { label: 'Service Area', value: 'East Texas and select surrounding areas' },
+    { label: 'Updates', value: 'Photo and video updates available during care' },
   ],
-  focus: {
-    eyebrow: 'In-home focus',
-    title: 'Grooming can be in-home or arranged via discreet drop-off - whichever keeps your pets calm.',
-    body: 'Multi-day overnights and barn care are available with travel; we coordinate timing to match your animals\' routines.',
-  },
-}
-
-export const cta = {
-  eyebrow: 'Ready When You Are',
-  title: "Let's design a calm care plan.",
-  subtitle:
-    'Share your dates, pets, address area, and requested services. We will confirm timing and provide a tailored plan.',
-  primaryLabel: 'Request Care',
-  emailLabel: 'Email us',
-  contactLabel: 'Contact',
-  email: 'pawsitivepetsitting@example.com',
-  mailtoSubject: 'Pawsitive Pet Sitting - Care Request',
-  mailtoBody:
-    'Hi Pawsitive Pet Sitting,%0D%0A%0D%0AWe are looking for care on these dates:%0D%0AOur pets and needs:%0D%0AOur address area:%0D%0ARequested services (drop-in visits, overnights, grooming):%0D%0A%0D%0AThank you!',
-  lede:
-    'Extreme care, high standards, and respectful presence in your home or barn. Share your details and we will curate a tailored plan.',
-  instructions: 'Include dates, pet types, address area, and requested services.',
-  servicesLine: 'Drop-in visits · Overnights · Grooming (in-home or drop-off)',
 }
